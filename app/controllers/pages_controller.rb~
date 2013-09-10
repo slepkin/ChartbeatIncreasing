@@ -1,0 +1,7 @@
+class PagesController < ApplicationController
+
+  def increasing
+    render json: Page.where("difference > 0")
+  end
+
+end

@@ -14,7 +14,7 @@ class Page < ActiveRecord::Base
     ["gizmodo.com", "avc.com", "someecards.com"].each do |host|
       uri.query = URI.encode_www_form(:apikey => key,
                                       :host => host,
-                                      :limit => 1
+                                      :limit => 100
                                       )
       response = Net::HTTP.get_response(uri)
       pages_attrs = JSON.parse(response.body, symbolize_names: true)

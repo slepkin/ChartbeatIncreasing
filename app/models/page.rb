@@ -38,7 +38,6 @@ class Page < ActiveRecord::Base
       pages.each {|page| page.save}
     end
 
-    #The below only works if we're only adding rows, not updating.
-    #Page.import pages
+    Page.delay(:run_at => 5.seconds.from_now).populate
   end
 end

@@ -29,11 +29,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-# Run cron jobs in Ruby
-gem 'whenever'
-
-#Save models to database en masse
-gem 'activerecord-import'
+# DJ for Active Record
+gem 'delayed_job_active_record'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

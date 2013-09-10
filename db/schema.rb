@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130910174920) do
+ActiveRecord::Schema.define(:version => 20130910191124) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0, :null => false
@@ -36,5 +36,7 @@ ActiveRecord::Schema.define(:version => 20130910174920) do
     t.string  "host"
     t.integer "difference"
   end
+
+  add_index "pages", ["host", "path"], :name => "index_pages_on_host_and_path"
 
 end

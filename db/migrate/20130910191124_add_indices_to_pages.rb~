@@ -1,0 +1,5 @@
+class AddIndicesToPages < ActiveRecord::Migration
+  def change
+    add_index :pages, :host, :path
+  end
+end
